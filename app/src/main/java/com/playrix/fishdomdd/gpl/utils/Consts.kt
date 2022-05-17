@@ -6,11 +6,9 @@ import com.playrix.fishdomdd.gpl.utils.enums.CardBoardOptions
 
 const val GAME_PREFERENCES = "GamePreferences"
 const val LINK_PREFERENCES = "LinkPreferences"
-const val BOARD_PREFERENCES = "BOARD_PREFERENCES"
+const val BOARD_PREFERENCES = "BoardPreferences"
 
 var MAX_MISTAKES_COUNT = 15
-
-
 var MEMORY_CARDS_SIZE: Int = 0
 
 fun getMemoryCards(boardOption: CardBoardOptions): List<MemoryCard> {

@@ -84,7 +84,6 @@ class GameFragment : Fragment(), MemoryCardAdapter.TreGameCardAdapterInterface {
         viewModel.processMemoryCards(firstCard, secondCard)
     }
 
-
     private fun initRv() = with(binding.rvCards) {
         adapter = mAdapter
         layoutManager = GridLayoutManager(

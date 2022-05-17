@@ -2,7 +2,6 @@ package com.playrix.fishdomdd.gpl.ui
 
 import android.content.Context
 import android.net.Uri
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.onesignal.OneSignal
@@ -27,21 +26,18 @@ class TreInitViewModel @Inject constructor(
                 val link = treMainLink.treCollect(context)
                 linkPreferences.updateCachedLink(link)
                 callback(link)
-                Log.d("TAG", "collectLink: $link")
         }
     }
 
     fun initLoading(callback: (String) -> Unit) = viewModelScope.launch {
         val link = linkFlow.first().cachedLink
         callback(link)
-        Log.d("TAG", "initLoading: $link")
     }
 
     fun setUrlAndOrganic(url: String, organic: Boolean, callback: (Boolean) -> Unit) {
         treMainLink.treOrganicAccess = organic
         treMainLink.treUrl = url
         callback(url.contains("jhfe".vigenere()))
-        Log.d("TAG", "setUrlAndOrganic: $url $organic")
     }
 
     fun treSetDeepLink(uri: Uri?) {
@@ -50,7 +46,6 @@ class TreInitViewModel @Inject constructor(
             val treArrayDeepLink = it.split("//")
             treMainLink.treSubAll = treArrayDeepLink[1].split("_")
         }
-        Log.d("TAG", "treSetDeepLink: ${treMainLink.treDeepLink} ${treMainLink.treSubAll}")
     }
 
     fun treSetAfUserId(id: String) {
