@@ -1,7 +1,12 @@
 package com.playrix.fishdomdd.gpl
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
+import android.view.View
+import android.view.animation.AccelerateInterpolator
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.animation.doOnEnd
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.playrix.fishdomdd.gpl.databinding.ActivityMainBinding
@@ -14,6 +19,19 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen().setOnExitAnimationListener { splashView ->
+            ObjectAnimator.ofFloat(
+                splashView.view,
+                View.ALPHA,
+                1F,
+                0F
+            ).apply {
+                interpolator = AccelerateInterpolator()
+                duration = 400L
+                doOnEnd { splashView.remove() }
+                start()
+            }
+        }
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

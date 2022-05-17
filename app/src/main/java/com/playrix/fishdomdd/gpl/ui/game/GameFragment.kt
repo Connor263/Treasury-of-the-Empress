@@ -45,8 +45,6 @@ class GameFragment : Fragment(), MemoryCardAdapter.TreGameCardAdapterInterface {
         mAdapter = MemoryCardAdapter(this)
 
         viewModel.setMemoryCards()
-
-        initRv()
         viewModel.mistakes.observe(viewLifecycleOwner) {
             binding.tvMistakes.text = resources.getString(R.string.mistakes, it)
         }
@@ -70,6 +68,7 @@ class GameFragment : Fragment(), MemoryCardAdapter.TreGameCardAdapterInterface {
                 }
             }
         }
+        initRv()
     }
 
     override fun onDestroyView() {
