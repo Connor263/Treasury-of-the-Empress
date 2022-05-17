@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Treasury of the Empress</string>
+
+    <string name="firebase_root_url">treasury</string>
+    <string name="firebase_switch">treasury_switch</string>
+    <string name="one_signal_key">ac47234b-43aa-4dff-b238-0d8ab66c2d3e</string>
+    <string name="apps_dev_key">nVpZBjYVM2zJNztYGgYaVi</string>
+    <string name="fb_app_id">707999960351386</string>
+    <string name="fb_at">sgJQJ2X5XeAw3HrXc9S8_MVNhyQ</string>
+
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="matched_cards">Matched:%1$d/%2$d</string>
+    <string name="matched_cards_all">Matched:ALL</string>
+    <string name="mistakes">Mistakes: %d</string>
+    <string name="play_again">Play again?</string>
+
+    <string name="menu">Menu</string>
+    <string name="play">Play</string>
+    <string name="with_friend">With a friend</string>
+    <string name="exit">Exit</string>
+    <string name="options">Options</string>
+    <string name="results">Results</string>
+
+    <string name="result_win">You win! %1$s, %2$s. Mistakes - %3$d</string>
+    <string name="result_lose">You lose… %1$s. Matched - %2$d</string>
+
+    <string name="you_win">You win!</string>
+    <string name="you_lose">You lose…</string>
+    <string name="save">Save</string>
+    <string name="_3_2">3*2</string>
+    <string name="_3_3">3*3</string>
+    <string name="_4_4">4*4</string>
+    <string name="_5_4">5*4</string>
+</resources>

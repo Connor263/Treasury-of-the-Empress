@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/menu_bg"
+    tools:context=".ui.game.score.ScoreFragment">
+
+    <TextView
+        android:id="@+id/tv_game_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/you_win" />
+
+    <TextView
+        android:id="@+id/matched_cards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        app:layout_constraintEnd_toEndOf="@+id/tv_game_result"
+        app:layout_constraintStart_toStartOf="@+id/tv_game_result"
+        app:layout_constraintTop_toBottomOf="@+id/tv_game_result"
+        tools:text="@string/matched_cards" />
+
+    <TextView
+        android:id="@+id/tv_mistakes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintEnd_toEndOf="@+id/matched_cards"
+        app:layout_constraintStart_toStartOf="@+id/matched_cards"
+        app:layout_constraintTop_toBottomOf="@+id/matched_cards"
+        tools:text="@string/mistakes" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/m_btn_play_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/play_again"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/matched_cards"
+        app:layout_constraintStart_toStartOf="@+id/matched_cards"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mistakes" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/m_btn_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/m_btn_play_again"
+        app:layout_constraintStart_toStartOf="@+id/m_btn_play_again"
+        app:layout_constraintTop_toBottomOf="@+id/m_btn_play_again" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

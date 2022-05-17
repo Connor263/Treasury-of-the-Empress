@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.game.menu.MenuFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/m_btn_play"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/play"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/m_btn_results"
+        app:layout_constraintEnd_toEndOf="@+id/m_btn_results"
+        app:layout_constraintStart_toStartOf="@+id/m_btn_results" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/m_btn_results"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/results"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/m_btn_options"
+        app:layout_constraintEnd_toEndOf="@+id/m_btn_options"
+        app:layout_constraintStart_toStartOf="@+id/m_btn_options" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/m_btn_options"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/options"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/m_btn_exit"
+        app:layout_constraintEnd_toEndOf="@+id/m_btn_exit"
+        app:layout_constraintStart_toStartOf="@+id/m_btn_exit" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/m_btn_exit"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="256dp"
+        android:text="@string/exit"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
